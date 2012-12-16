@@ -1,0 +1,4 @@
+[1].WEB目录不是：WebRoot
+[2].项目Class设置不是:WebRoot/WEB-INF/classes
+[3].创建的表没有字段[obid][create_dt]
+[4].Hibernate反向生成的表，对应的字段没有注释，Int类型会在oracle中会生成Number(19)

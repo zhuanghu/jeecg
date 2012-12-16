@@ -1,0 +1,18 @@
+演示代码生成器使用步骤
+
+##步骤一：生成表SQL
+CREATE TABLE `person` (
+  `OBID` varchar(36) NOT NULL default '' COMMENT '主键',
+  `NAME` varchar(32) default NULL COMMENT '用户名',
+  `AGE` int(11) default NULL COMMENT '年龄',
+  `SALARY` decimal(10,2) default NULL COMMENT '工资',
+  `createDt` datetime default NULL COMMENT '创建时间',
+  PRIMARY KEY  (`OBID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+注意：建表的时候，必须给每个字段加上注释，代码生成器会根据注释去生成对应页面字段显示的文本
+
+##步骤二 配置菜单
+
+演示完毕

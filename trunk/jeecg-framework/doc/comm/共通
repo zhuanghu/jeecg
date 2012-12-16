@@ -1,0 +1,12 @@
+[1].按钮权限追加方法
+针对需要加按钮权限控制的使用标签：<btn:access privilege="personAction!add1.action">add();</btn:access>
+参数：privilege = 按钮触发对应方法
+
+例子如下：
+toolbar : [ {
+				text : '增加',
+				iconCls : 'icon-add',
+				handler : function() {
+					<btn:access privilege="personAction!add1.action">add();</btn:access>
+				}
+			}
