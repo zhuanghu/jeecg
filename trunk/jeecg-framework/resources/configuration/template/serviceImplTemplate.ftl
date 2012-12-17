@@ -17,7 +17,7 @@ import sy.pageModel.DataGrid;
 import ${bussiPackage}.page.${entityPackage}.${entityName}Page;
 import sy.service.impl.BaseServiceImpl;
 import ${bussiPackage}.service.${entityPackage}.${entityName}ServiceI;
-import sun.util.dbcommon.DbEntityUtils;
+import sun.util.dbcommon.SearchSqlGenerateUtil;
 import sy.dao.jdbc.JdbcDao;
 
 /**   
@@ -90,7 +90,7 @@ public class ${entityName}ServiceImpl extends BaseServiceImpl implements ${entit
 		
 		${entityName}Entity ${entityName?uncap_first}Entity = new ${entityName}Entity();
 		BeanUtils.copyProperties(${entityName?uncap_first}Page, ${entityName?uncap_first}Entity);
-		DbEntityUtils.createSearchParamsHql(hqlbf, values, ${entityName?uncap_first}Entity);
+		SearchSqlGenerateUtil.createSearchParamsHql(hqlbf, values, ${entityName?uncap_first}Entity);
 		hql = hqlbf.toString();
 		//-----------------------------------------------------
 		if (${entityName?uncap_first}Page.getCcreatedatetimeStart() != null) {

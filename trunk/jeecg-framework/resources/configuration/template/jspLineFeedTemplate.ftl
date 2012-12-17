@@ -323,7 +323,13 @@
 							<tr>
 		 					</#if>
 							<td>${po.filedComment}</td>
-							<td><input name="${po.fieldName}" type="text" class="${po.classType}" data-options="${po.optionType}" missingMessage="请填写${po.filedComment}"  style="width: 155px;"/></td>
+							<td>
+							<#if  po_index  lte field_required_num>
+							<input name="${po.fieldName}" type="text" class="${po.classType}" data-options="${po.optionType}" missingMessage="请填写${po.filedComment}"  style="width: 155px;"/>
+							<#else>
+							<input name="${po.fieldName}" type="text" class="${po.classType}" data-options="" missingMessage="请填写${po.filedComment}"  style="width: 155px;"/>
+	                    	</#if>
+							</td>
 							<#if (po_index+1)%field_row_num==0>
 							</tr>
 							<#else>
@@ -345,7 +351,13 @@
 							<tr>
 		 					</#if>
 							<td>${po.filedComment}</td>
-							<td><input name="${po.fieldName}" type="text" class="${po.classType}" data-options="${po.optionType}"  missingMessage="请填写${po.filedComment}"  style="width: 155px;"/></td>
+							<td>
+							<#if  po_index  lte field_required_num>
+							<input name="${po.fieldName}" type="text" class="${po.classType}" data-options="${po.optionType}" missingMessage="请填写${po.filedComment}"  style="width: 155px;"/>
+							<#else>
+							<input name="${po.fieldName}" type="text" class="${po.classType}" data-options="" missingMessage="请填写${po.filedComment}"  style="width: 155px;"/>
+	                    	</#if>
+							</td>
 							<#if (po_index+1)%field_row_num==0>
 							</tr>
 							<#else>
